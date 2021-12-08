@@ -1,4 +1,4 @@
-<?php require_once('filter.php') ?>
+<?php require_once('filter-cal.php') ?>
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -15,15 +15,13 @@
         $HPFfrequency =$_POST['HPF_value'];
         $LPFfrequency =$_POST['LPF_value'];
     }
-
-        if((@$HPFfrequency && @$LPFfrequency) != 0){
-        @$HPFcalculate = floor(1.5708 / (2*pi()*$HPFfrequency));
-        @$LPFcalculate = floor(1 / (2.256*$LPFfrequency));
-        }
+    
+    @$HPFcalculate = floor(1.5708/(2*pi()*$HPFfrequency));
+    @$LPFcalculate = floor(1/(2.256*$LPFfrequency));
 
     ?>
-    <p>ハイパスフィルタ計算結果<?php echo @$HPFcalculate?></p>
-    <p>ローパスフィルタ計算結果<?php echo @$LPFcalculate?></p>
+    <p>ハイパスフィルタ計算結果:<?php echo @$HPFcalculate?></p>
+    <p>ローパスフィルタ計算結果:<?php echo @$LPFcalculate?></p>
     </div>
 </body>
 </html>
