@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -16,7 +17,7 @@
 
     <form action="confirm.php" method = "post">
         <div class="HPF">
-            <?='HPF'?>
+            <?='HPF'?> 
             <input type="number" value="HPF_value" size="15">
         </div>
         <div class="LPF">
@@ -28,6 +29,6 @@
             <input type="submit"  value="計算">
         </div>
     </form>
-
+    
 </body>
 </html>
